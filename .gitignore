@@ -1,0 +1,6 @@
+package-lock.json
+node_modules/
+dist/*
+src/css/*.css
+src/img/*
+dist/*.html

@@ -1,0 +1,131 @@
+.header { 
+    
+}
+
+// ------------------------------ Top ------------------------------
+.header-top { 
+    background: var(--gold-color, #C8A35F);
+    padding: 16px 0;
+}
+
+.header-top__container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.header__langs { 
+    display: flex;
+    gap: 10px;
+}
+
+.header__lang { 
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+
+    &._this {
+        opacity: 1;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.header__phone { 
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header__email { 
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+// ------------------------------ Bottom ------------------------------
+.header-bottom { 
+    padding: clamp(0.938rem, -0.348rem + 2.86vw, 1.688rem) 0;
+}
+
+.header-bottom__container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.header__logo {
+    padding-right: 30px;
+    border-right: 1px solid white;
+
+    @media (max-width: 830px) {
+        border: none;
+    }
+
+    @media (max-width: 400px) {
+        .logo__label {
+            display: none;
+        }
+
+        padding-right: 0;
+    }
+}
+
+.header__our-offices { 
+    margin-right: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.7px;
+
+    @media (max-width: 830px) {
+        margin-right: 0;
+    }
+
+    a {
+        transition: color 0.3s ease;
+        
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--gold-color);
+            }
+        }
+    }
+}
+
+.header__nav { 
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    @media (max-width: 830px) {
+        display: none;
+    }
+}
+
+.header__nav-link { 
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--gold-color);
+        }
+    }
+}

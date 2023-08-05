@@ -1,0 +1,130 @@
+@import 'base/reset';
+// @import 'base/fonts';
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,500,700);
+
+:root {
+    --gold-color: #C8A35F;
+    --dark-color: #2F343A;
+    --gray-color: #393F47;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+body, html {
+    background: var(--dark-color, #2F343A);
+    scroll-behavior: smooth;
+}
+
+[class *= "__container"] {
+    max-width: 1140px;
+    min-width: 360px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+// ------------------------------ Elements ------------------------------
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.title {
+    display: inline-flex;
+    flex-direction: column;
+    font-size: clamp(1.625rem, 0.125rem + 3.33vw, 2.5rem);
+    font-weight: 700;
+    line-height: 123.047%; /* 49.219px */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &::before {
+        content: '';
+        width: 90px;
+        height: 6px;
+        background: var(--gold-color, #C8A35F);
+        margin-bottom: clamp(1.25rem, -0.893rem + 4.76vw, 2.5rem);
+    }
+}
+
+.text {
+    font-size: clamp(0.75rem, 0.107rem + 1.43vw, 1.125rem);
+    font-weight: 400;
+    line-height: 158.203%; /* 28.477px */
+}
+
+.button {
+    display: inline-flex;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 158.203%; /* 25.313px */
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+
+    padding: 14px 48px 13px;
+    background: var(--gold-color, #C8A35F);
+    border: 2px solid var(--gold-color, #C8A35F);
+    transition: background-color 0.3s ease;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background: transparent;
+        }
+    }
+}
+
+.slider-btn {
+    text-align: center;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+
+    span {
+        color: var(--gold-color, #C8A35F);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 158.203%; /* 25.313px */
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+    }
+
+    svg path {
+        fill: var(--gold-color, #C8A35F);
+    }
+
+    &._prev {
+        flex-direction: row-reverse;
+
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    &:disabled {
+        cursor: default;
+        opacity: 0.3;
+    }
+}
+
+// ------------------------------ Blocks ------------------------------
+.map {
+    height: 450px;
+    background: linear-gradient(0deg, rgba(57, 63, 71, 0.60) 0%, rgba(57, 63, 71, 0.60) 100%), url("../img/bg/map.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+// ------------------------------ Sections ------------------------------
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/services";
+@import "blocks/all-services";
+@import "blocks/about";
+@import "blocks/footer";

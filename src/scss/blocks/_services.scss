@@ -1,0 +1,118 @@
+.services { 
+    margin-bottom: 120px;
+    padding: 120px 0 129px;
+    position: relative;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: calc(755px / 1920px * 100%);
+        background: var(--gray-color);
+        z-index: -1;
+    }
+
+    &::after {
+        left: auto;
+        right: 0;
+    }
+
+    @media (max-width: 690px) {
+        &::after {
+            width: 70%;
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.services__container { 
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+
+    @media (max-width: 590px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.services__content { 
+    margin-bottom: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.services__title { }
+
+.services__descr { 
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.services__more-btn { }
+
+// ------------------------------ Slider ------------------------------
+.services__slider-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+    @media (max-width: 1050px) {
+        flex-direction: column;
+    }
+ }
+
+.services__slider { 
+    display: flex;
+    touch-action: pan-y;
+    overflow: hidden;
+    width: 445px;
+
+    @media (max-width: 830px) {
+        width: 310px;
+    }
+
+    @media (max-width: 590px) {
+        width: 445px;
+    }
+
+    @media (max-width: 500px) {
+        width: 310px;
+    }
+}
+
+.services__slider-wrapper {
+    display: flex;
+}
+
+.services__slider-image { 
+    width: 100%;
+    height: auto;
+}
+
+.services__slider-nav-btns { 
+    display: flex;
+    flex-direction: column;
+    gap: 245px;
+    
+    @media (max-width: 1050px) {
+        flex-direction: row-reverse;
+        gap: 15px 30px;
+        justify-content: space-between;
+        align-self: stretch;
+    }
+
+    @media (max-width: 670px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.services__slider-btn { }
